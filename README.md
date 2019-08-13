@@ -1,3 +1,4 @@
-# Provider + Get_it Architecture
+# Base flutter architecture
 
-This is the starting code for [this tutorial](https://www.filledstacks.com/post/flutter-architecture-my-provider-implementation-guide) where we setup a Flutter app architecture using the Provider package.
+This is the bare simple architecture of a flutter architecture using Get_it.
+This is based on [https://www.filledstacks.com/post/flutter-architecture-my-provider-implementation-guide](https://www.filledstacks.com/post/flutter-architecture-my-provider-implementation-guide)
