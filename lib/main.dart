@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'locator.dart';
-import 'router.dart';
-import 'core/models/user.dart';
-import 'core/services/authentication_service.dart';
+import 'core/router/route_paths.dart';
+import 'core/provider/provider_setup.dart';
+import 'core/router/router.dart';
 
-void main() {
-  setupLocator();
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return StreamProvider<User>.controller(
-      initialData: User.initial(),
-      builder: (_) => locator<AuthenticationService>().userController,
+    return MultiProvider(
+      providers: providers,
       child: MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(),
-        initialRoute: 'login',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        initialRoute: RoutePaths.Login,
         onGenerateRoute: Router.generateRoute,
       ),
     );

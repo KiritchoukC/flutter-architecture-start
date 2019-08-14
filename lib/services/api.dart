@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:provider_architecutre/core/models/user.dart';
 import 'package:http/http.dart' as http;
+import 'package:provider_arc/core/models/user.dart';
 
 /// The service responsible for networking requests
 class Api {

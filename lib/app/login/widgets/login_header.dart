@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../shared/ui_helpers.dart';
+
+import '../../../core/helpers/ui_helpers.dart';
 
 class LoginHeader extends StatelessWidget {
   final TextEditingController controller;
@@ -10,10 +11,9 @@ class LoginHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
-      Text('Login', style: Theme.of(context).textTheme.title),
-      UIHelper.verticalSpaceMedium(),
-      Text('Enter a number between 1 - 10',
-          style: Theme.of(context).textTheme.subtitle),
+      Text('Login'),
+      UIHelper.verticalSpaceMedium,
+      Text('Enter a number between 1 - 10'),
       LoginTextField(controller),
       this.validationMessage != null
           ? Text(validationMessage, style: TextStyle(color: Colors.red))
@@ -37,10 +37,8 @@ class LoginTextField extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(10.0)),
       child: TextField(
-        decoration: InputDecoration.collapsed(hintText: 'User Id'),
-        controller: controller,
-        keyboardType: TextInputType.number,
-      ),
+          decoration: InputDecoration.collapsed(hintText: 'User Id'),
+          controller: controller),
     );
   }
 }

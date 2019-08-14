@@ -1,4 +1,4 @@
-package com.example.provider_architecutre;
+package com.example.provider_arc;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
